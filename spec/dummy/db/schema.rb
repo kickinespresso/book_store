@@ -11,7 +11,51 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20150814143958) do
+ActiveRecord::Schema.define(version: 20150814153733) do
+
+  create_table "book_store_authors", force: :cascade do |t|
+    t.string   "name"
+    t.text     "description"
+    t.string   "slug"
+    t.datetime "created_at",  null: false
+    t.datetime "updated_at",  null: false
+  end
+
+  add_index "book_store_authors", ["slug"], name: "index_book_store_authors_on_slug", unique: true
+
+  create_table "book_store_books", force: :cascade do |t|
+    t.string   "title"
+    t.string   "lead"
+    t.text     "excerpt"
+    t.text     "description"
+    t.decimal  "price"
+    t.integer  "cover_type"
+    t.integer  "num_pages"
+    t.string   "isbn"
+    t.integer  "year"
+    t.string   "buy_link"
+    t.string   "size"
+    t.string   "cover_image"
+    t.string   "slug"
+    t.integer  "author_id"
+    t.integer  "category_id"
+    t.datetime "created_at",  null: false
+    t.datetime "updated_at",  null: false
+  end
+
+  add_index "book_store_books", ["author_id"], name: "index_book_store_books_on_author_id"
+  add_index "book_store_books", ["category_id"], name: "index_book_store_books_on_category_id"
+  add_index "book_store_books", ["slug"], name: "index_book_store_books_on_slug", unique: true
+
+  create_table "book_store_categories", force: :cascade do |t|
+    t.string   "title"
+    t.text     "description"
+    t.string   "slug"
+    t.datetime "created_at",  null: false
+    t.datetime "updated_at",  null: false
+  end
+
+  add_index "book_store_categories", ["slug"], name: "index_book_store_categories_on_slug", unique: true
 
   create_table "users", force: :cascade do |t|
     t.string   "email",                  default: "", null: false

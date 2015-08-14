@@ -13,7 +13,7 @@ Gem::Specification.new do |s|
   s.summary     = "TODO: Summary of BookStore."
   s.description = "TODO: Description of BookStore."
   s.license     = "MIT"
-
+  s.test_files = Dir["spec/**/*"]
   s.files = Dir["{app,config,db,lib}/**/*", "MIT-LICENSE", "Rakefile", "README.rdoc"]
 
   s.add_dependency "rails", "~> 4.2.3"

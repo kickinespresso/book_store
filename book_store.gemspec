@@ -14,7 +14,7 @@ Gem::Specification.new do |s|
   s.description = "TODO: Description of BookStore."
   s.license     = "MIT"
   s.test_files = Dir["spec/**/*"]
-  s.files = Dir["{app,config,db,lib}/**/*", "MIT-LICENSE", "Rakefile", "README.rdoc"]
+  s.files = Dir["{app,config,db,lib}/**/*", "MIT-LICENSE", "Rakefile", "README.MD"]
 
   s.add_dependency "rails", "~> 4.2.3"
   s.add_dependency "friendly_id", ">= 5.0"

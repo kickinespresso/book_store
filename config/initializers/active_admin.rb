@@ -1,0 +1,1 @@
+#ActiveAdmin.application.load_paths += Dir[File.dirname(__FILE__) + '/book_store/admin']

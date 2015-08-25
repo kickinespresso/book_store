@@ -2,6 +2,11 @@ require 'rails_helper'
 
 module BookStore
   RSpec.describe Author, type: :model do
-    pending "add some examples to (or delete) #{__FILE__}"
+    it "has a valid factory" do
+      expect(FactoryGirl.build(:book_store_author)).to be_valid
+    end
   end
+
+
+
 end

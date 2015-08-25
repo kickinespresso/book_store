@@ -2,6 +2,8 @@ require 'rails_helper'
 
 module BookStore
   RSpec.describe Category, type: :model do
-    pending "add some examples to (or delete) #{__FILE__}"
+    it "has a valid factory" do
+      expect(FactoryGirl.build(:book_store_category)).to be_valid
+    end
   end
 end

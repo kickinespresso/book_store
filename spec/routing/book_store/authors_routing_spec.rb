@@ -4,16 +4,18 @@ module BookStore
   RSpec.describe AuthorsController, type: :routing do
     describe "routing" do
 
+
       it "routes to #index" do
-        expect(:get => "/book_store/authors").to route_to("authors#index")
+        expect(:get => authors_path).to route_to(:controller => "book_store/authors", :action => "index")
       end
+
 
       it "routes to #new" do
         expect(:get => "/book_store/authors/new").not_to be_routable
       end
 
       it "routes to #show" do
-        expect(:get => "/book_store/authors/1").to route_to("authors#show", :id => "1")
+        expect(:get => "/book_store/authors/1").to route_to("/book_store/authors#show", :id => "1")
       end
 
       it "routes to #edit" do

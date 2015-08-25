@@ -5,35 +5,35 @@ module BookStore
     describe "routing" do
 
       it "routes to #index" do
-        expect(:get => "/books").to route_to("books#index")
+        expect(:get => "/book_store/books").to route_to("books#index")
       end
 
       it "routes to #new" do
-        expect(:get => "/books/new").to route_to("books#new")
+        expect(:get => "/book_store/books/new").not_to be_routable
       end
 
       it "routes to #show" do
-        expect(:get => "/books/1").to route_to("books#show", :id => "1")
+        expect(:get => "/book_store/books/1").to route_to("books#show", :id => "1")
       end
 
       it "routes to #edit" do
-        expect(:get => "/books/1/edit").to route_to("books#edit", :id => "1")
+        expect(:get => "/book_store/books/1/edit").not_to be_routable
       end
 
       it "routes to #create" do
-        expect(:post => "/books").to route_to("books#create")
+        expect(:post => "/book_store/books").not_to be_routable
       end
 
       it "routes to #update via PUT" do
-        expect(:put => "/books/1").to route_to("books#update", :id => "1")
+        expect(:put => "/book_store/books/1").not_to be_routable
       end
 
       it "routes to #update via PATCH" do
-        expect(:patch => "/books/1").to route_to("books#update", :id => "1")
+        expect(:patch => "/book_store/books/1").not_to be_routable
       end
 
       it "routes to #destroy" do
-        expect(:delete => "/books/1").to route_to("books#destroy", :id => "1")
+        expect(:delete => "/book_store/books/1").not_to be_routable
       end
 
     end

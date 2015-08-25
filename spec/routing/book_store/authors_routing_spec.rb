@@ -5,35 +5,35 @@ module BookStore
     describe "routing" do
 
       it "routes to #index" do
-        expect(:get => "/authors").to route_to("authors#index")
+        expect(:get => "/book_store/authors").to route_to("authors#index")
       end
 
       it "routes to #new" do
-        expect(:get => "/authors/new").to route_to("authors#new")
+        expect(:get => "/book_store/authors/new").not_to be_routable
       end
 
       it "routes to #show" do
-        expect(:get => "/authors/1").to route_to("authors#show", :id => "1")
+        expect(:get => "/book_store/authors/1").to route_to("authors#show", :id => "1")
       end
 
       it "routes to #edit" do
-        expect(:get => "/authors/1/edit").to route_to("authors#edit", :id => "1")
+        expect(:get => "/book_store/authors/1/edit").not_to be_routable
       end
 
       it "routes to #create" do
-        expect(:post => "/authors").to route_to("authors#create")
+        expect(:post => "/book_store/authors").not_to be_routable
       end
 
       it "routes to #update via PUT" do
-        expect(:put => "/authors/1").to route_to("authors#update", :id => "1")
+        expect(:put => "/book_store/authors/1").not_to be_routable
       end
 
       it "routes to #update via PATCH" do
-        expect(:patch => "/authors/1").to route_to("authors#update", :id => "1")
+        expect(:patch => "/book_store/authors/1").not_to be_routable
       end
 
       it "routes to #destroy" do
-        expect(:delete => "/authors/1").to route_to("authors#destroy", :id => "1")
+        expect(:delete => "/book_store/authors/1").not_to be_routable
       end
 
     end

@@ -6,7 +6,7 @@ module BookStore
 
     # GET /authors
     def index
-      @authors = Author.all
+      @authors = Author.page(params[:page])
     end
 
     # GET /authors/1

@@ -27,7 +27,10 @@ Gem::Specification.new do |s|
   s.add_dependency 'ckeditor','~> 4.1.3'
   s.add_dependency  'acts-as-taggable-on', '~> 3.4'
   s.add_dependency  'activeadmin','~> 1.0.0.pre1'
-
+  s.add_dependency "fog", ">= 1.18"
+  s.add_dependency "carrierwave", ">= 0.9"
+  s.add_dependency "mini_magick", ">= 3.7"
+  s.add_dependency "thor", "~> 0.19.1"
   #dummy dependency
   s.add_dependency "devise", ">= 3.5.2"
 

@@ -3,18 +3,22 @@ require "rails_helper"
 module BookStore
   RSpec.describe BooksController, type: :routing do
     describe "routing" do
+=begin
 
       it "routes to #index" do
         expect(:get => "/book_store/books").to route_to("books#index")
       end
+=end
 
       it "routes to #new" do
         expect(:get => "/book_store/books/new").not_to be_routable
       end
 
+=begin
       it "routes to #show" do
         expect(:get => "/book_store/books/1").to route_to("books#show", :id => "1")
       end
+=end
 
       it "routes to #edit" do
         expect(:get => "/book_store/books/1/edit").not_to be_routable

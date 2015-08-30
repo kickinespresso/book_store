@@ -12,7 +12,6 @@ FactoryGirl.define do
     buy_link "MyString"
     size "MyString"
     cover_image "MyString"
-    slug "MyString"
     author nil
     category nil
   end

@@ -3,7 +3,7 @@ require 'rails/generators/base'
 module BookStore
   module Generators
     class InstallGenerator < Rails::Generators::Base
-      source_root File.expand_path("../../templates", __FILE__)
+      source_root File.expand_path("../templates", __FILE__)
 
       desc "Creates a Bookstore initializer for your application."
 
@@ -23,7 +23,7 @@ module BookStore
       end
 
       def copy_initializer
-        template "book_store.rb", "config/initializers/book_store.rb"
+        template "../templates/book_store.rb", "config/initializers/book_store.rb"
       end
 
       def add_book_store_routes
@@ -33,7 +33,7 @@ module BookStore
       end
 
       def show_readme
-        readme "README" if behavior == :invoke
+        #readme "README" if behavior == :invoke
       end
     end
   end

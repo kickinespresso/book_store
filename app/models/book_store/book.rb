@@ -9,5 +9,7 @@ module BookStore
 
     mount_uploader :cover_image, ImageUploader
     mount_uploader :featured_image, ImageUploader
+
+    validates_presence_of :title, :lead, :excerpt, :description, :price, :cover_type, :isbn, :num_pages, :size, :featured, :author, :category
   end
 end

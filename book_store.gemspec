@@ -8,10 +8,10 @@ Gem::Specification.new do |s|
   s.name        = "book_store"
   s.version     = BookStore::VERSION
   s.authors     = ["Chris Desch"]
-  s.email       = ["cdesch@gmail.com"]
-  s.homepage    = "TODO"
-  s.summary     = "TODO: Summary of BookStore."
-  s.description = "TODO: Description of BookStore."
+  s.email       = ["chris@kickinespresso.com"]
+  s.homepage    = "http://www.kickinespresso.com"
+  s.summary     = "Basic Book store gem"
+  s.description = "This gem is the working views and admin panels for a book store."
   s.license     = "MIT"
   s.test_files = Dir["spec/**/*"]
   s.files = Dir["{app,config,db,lib}/**/*", "MIT-LICENSE", "Rakefile", "README.MD"]

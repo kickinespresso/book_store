@@ -16,6 +16,7 @@ if defined?(ActiveAdmin)
         f.input :num_pages
         f.input :size
         f.input :isbn
+        f.input :year
         f.input :cover_type, as: :select, collection:  BookStore::Book.cover_types.keys
         #f.input :cover_image, :as => :file
         #f.input :featured_image, :as => :file
@@ -32,6 +33,6 @@ if defined?(ActiveAdmin)
       end
       f.actions         # adds the 'Submit' and 'Cancel' buttons
     end
-    permit_params :title, :lead, :excerpt, :description, :price, :slug, :cover_type, :isbn, :num_pages, :size, :featured_image, :position, :featured, :cover_image, :author, :category,:author_id, :category_id, :cover_image_cache, :featured_image_cache
+    permit_params :title, :lead, :excerpt, :description, :price, :slug, :cover_type, :isbn, :num_pages, :size, :year, :featured_image, :position, :featured, :cover_image, :author, :category,:author_id, :category_id, :cover_image_cache, :featured_image_cache
   end
 end

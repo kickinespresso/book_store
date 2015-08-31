@@ -14,8 +14,10 @@ class CreateBookStoreBooks < ActiveRecord::Migration
       t.string :size
       t.string :cover_image
       t.string :slug
-      t.references :author, index: true, foreign_key: true
-      t.references :category, index: true, foreign_key: true
+      t.integer :category_id
+      t.integer :author_id
+      #t.references :author, index: true, foreign_key: true
+      #t.references :category, index: true, foreign_key: true
 
       t.timestamps null: false
     end

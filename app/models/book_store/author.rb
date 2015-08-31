@@ -3,6 +3,6 @@ module BookStore
     has_many :books
     extend FriendlyId
     friendly_id :name, use: [:slugged, :finders]
-    mount_uploader :avatar, ImageUploader
+    mount_uploader :avatar_image, ImageUploader
   end
 end

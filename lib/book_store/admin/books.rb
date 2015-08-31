@@ -3,7 +3,11 @@ if defined?(ActiveAdmin)
 
     index do
       selectable_column
-      column :title, :category, :author, :year
+      column :title
+      column :category
+      column :author
+      column :year
+      actions
     end
 
     # customize your resource here

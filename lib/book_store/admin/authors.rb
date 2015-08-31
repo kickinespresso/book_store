@@ -20,11 +20,7 @@ if defined?(ActiveAdmin)
         f.input :avatar_image, :as => :file, :hint => f.object.avatar_image.present? ? image_tag(f.object.avatar_image.url(:thumb)) : content_tag(:span, "no avatar image yet")
         f.input :avatar_image_cache, :as => :hidden
       end
-
-      f.inputs "Book Cover Image", :multipart => true do
-        f.input :cover_image, :as => :file, :hint => f.object.cover_image.present? ? image_tag(f.object.cover_image.url(:thumb)) : content_tag(:span, "no cover image yet")
-        f.input :cover_image_cache, :as => :hidden
-      end
+      
       f.actions         # adds the 'Submit' and 'Cancel' buttons
     end
     permit_params :name, :description, :slug, :website_link, :email_link, :facebook_link, :twitter_link, :lead, :short_description, :avatar, :avatar_image_cache

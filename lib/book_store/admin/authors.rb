@@ -21,6 +21,7 @@ if defined?(ActiveAdmin)
         f.input :avatar_image_cache, :as => :hidden
       end
 
+
       f.actions         # adds the 'Submit' and 'Cancel' buttons
     end
     permit_params :name, :description, :slug, :website_link, :email_link, :facebook_link, :twitter_link, :lead, :short_description, :avatar, :avatar_image_cache

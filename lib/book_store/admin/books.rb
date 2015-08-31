@@ -1,5 +1,11 @@
 if defined?(ActiveAdmin)
   ActiveAdmin.register  BookStore::Book, as: 'Book' do
+
+    index do
+      selectable_column
+      column :title, :category, :author, :year
+    end
+
     # customize your resource here
     form do |f|
       f.semantic_errors # shows errors on :base

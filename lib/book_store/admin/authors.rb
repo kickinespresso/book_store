@@ -30,7 +30,7 @@ if defined?(ActiveAdmin)
 
       f.actions         # adds the 'Submit' and 'Cancel' buttons
     end
-    permit_params :name, :description, :slug, :website_link, :email_link, :facebook_link, :twitter_link, :lead, :short_description, :avatar, :avatar_image_cache
+    permit_params :name, :description, :slug, :website_link, :email_link, :facebook_link, :twitter_link, :lead, :short_description, :avatar_image, :avatar_image_cache
   end
 end
 

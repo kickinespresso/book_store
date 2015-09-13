@@ -1,20 +1,20 @@
 require_dependency "book_store/application_controller"
 
-module BookStore
-  class AuthorsController < ApplicationController
-    before_action :set_author, only: [:show]
+  module BookStore
+    class AuthorsController < ApplicationController
+      before_action :set_author, only: [:show]
 
-    # GET /authors
-    def index
-      @authors = Author.page(params[:page])
-    end
+      # GET /authors
+      def index
+        @authors = Author.page(params[:page])
+      end
 
-    # GET /authors/1
-    def show
-    end
+      # GET /authors/1
+      def show
+      end
 
 
-    private
+      private
       # Use callbacks to share common setup or constraints between actions.
       def set_author
         @author = Author.find(params[:id])
@@ -24,5 +24,5 @@ module BookStore
       def author_params
         params.require(:author).permit(:name, :description, :slug)
       end
+    end
   end
-end

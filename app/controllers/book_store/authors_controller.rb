@@ -6,7 +6,7 @@ require_dependency "book_store/application_controller"
 
       # GET /authors
       def index
-        @authors = Author.page(params[:page])
+        @authors = Author.order('name ASC').page(params[:page])
       end
 
       # GET /authors/1

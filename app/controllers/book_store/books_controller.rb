@@ -6,7 +6,7 @@ module BookStore
 
     # GET /books
     def index
-      @books = Book.page(params[:page])
+      @books = Book.order('year DESC').page(params[:page])
     end
 
     # GET /books/1

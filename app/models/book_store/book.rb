@@ -7,11 +7,11 @@ module BookStore
     has_many :reviews
     enum cover_type: [:soft, :hard]
     scope :featured, -> { where featured: true }
-
+    paginates_per 12
     mount_uploader :cover_image, ImageUploader
     mount_uploader :featured_image, ImageUploader
     accepts_nested_attributes_for :reviews, :allow_destroy => true
 
-    validates_presence_of :title, :lead, :excerpt, :description, :price, :cover_type, :isbn, :num_pages, :size, :author, :category
+    validates_presence_of :title, :lead, :excerpt, :year, :description, :price, :cover_type, :isbn, :num_pages, :size, :author, :category
   end
 end

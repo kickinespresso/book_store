@@ -37,7 +37,7 @@ module BookStore
     end
 
     version :preview do
-      process :resize_to_fit => [150, 100]
+      process :resize_and_pad => [150, 100, :transparent, 'Center']
     end
 
     version :square do

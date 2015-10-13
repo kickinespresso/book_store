@@ -11,7 +11,8 @@ if defined?(ActiveAdmin)
     form do |f|
       f.semantic_errors # shows errors on :base
       f.inputs   do
-        f.input :name
+        f.input :first_name
+        f.input :last_name
         f.input :lead
         f.input :short_description
         f.input :description
@@ -30,7 +31,7 @@ if defined?(ActiveAdmin)
 
       f.actions         # adds the 'Submit' and 'Cancel' buttons
     end
-    permit_params :name, :description, :slug, :website_link, :email_link, :facebook_link, :twitter_link, :lead, :short_description, :avatar_image, :avatar_image_cache
+    permit_params :first_name, :last_name, :description, :slug, :website_link, :email_link, :facebook_link, :twitter_link, :lead, :short_description, :avatar_image, :avatar_image_cache
   end
 end
 

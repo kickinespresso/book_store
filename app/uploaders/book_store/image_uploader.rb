@@ -44,6 +44,10 @@ module BookStore
       process :resize_to_fit => [400, 400]
     end
 
+    version :wide do
+      process :resize_and_pad => [780, 400, :transparent, 'Center']
+    end
+
 
     # Add a white list of extensions which are allowed to be uploaded.
     # For images you might use something like this:

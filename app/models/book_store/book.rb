@@ -7,6 +7,7 @@ module BookStore
     has_many :reviews
     enum cover_type: [:soft, :hard]
     scope :featured, -> { where featured: true }
+    scope :not_featured, -> { where featured: false }
     paginates_per 12
     mount_uploader :cover_image, ImageUploader
     mount_uploader :featured_image, ImageUploader

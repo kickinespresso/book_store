@@ -7,6 +7,8 @@ if defined?(ActiveAdmin)
       column :category
       column :author
       column :year
+      column :position
+      column :featured
       actions
     end
 

@@ -6,7 +6,7 @@ module BookStore
 
     # GET /books
     def index
-      @books = Book.order('year DESC').page(params[:page])
+      @books = Book.order('year DESC, position ASC').page(params[:page])
       @books_groups = @books.group_by {|b| b.year}
 
     end

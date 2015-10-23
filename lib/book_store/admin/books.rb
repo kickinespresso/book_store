@@ -15,8 +15,12 @@ if defined?(ActiveAdmin)
     # customize your resource here
     form do |f|
       f.semantic_errors # shows errors on :base
+      f.inputs "Contributors" do
+        f.has_many :contributors, :allow_destroy => true do |s|
+          s.input :author
+        end
+      end
       f.inputs   do
-        f.input :author
         f.input :category
         f.input :title
         f.input :lead
@@ -54,7 +58,7 @@ if defined?(ActiveAdmin)
 
       f.actions         # adds the 'Submit' and 'Cancel' buttons
     end
-    permit_params :title, :lead, :excerpt, :description, :price, :slug, :cover_type, :isbn, :num_pages, :size, :buy_link, :year, :featured_image, :position, :featured, :cover_image, :author, :category,:author_id, :category_id, :cover_image_cache, :featured_image_cache, reviews_attributes: [:id, :content, :name, :publication, :book_id, :_destroy => true]
+    permit_params :title, :lead, :excerpt, :description, :price, :slug, :cover_type, :isbn, :num_pages, :size, :buy_link, :year, :featured_image, :position, :featured, :cover_image, :author, :category,:author_id, :category_id, :cover_image_cache, :featured_image_cache, contributors_attributes: [:id, :book_id, :author_id, :_destroy => true], reviews_attributes: [:id, :content, :name, :publication, :book_id, :_destroy => true]
 
 
   end

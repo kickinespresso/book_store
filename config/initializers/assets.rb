@@ -1,0 +1,1 @@
+Rails.application.config.assets.precompile += %w( jquery_ujs.js book_store/book_store.js   )

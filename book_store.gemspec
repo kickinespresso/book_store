@@ -33,6 +33,8 @@ Gem::Specification.new do |s|
   s.add_dependency "thor", "~> 0.19.1"
   #dummy dependency
   s.add_dependency "devise", ">= 3.5.2"
+  s.add_dependency 'ckeditor','~> 4.1.3'
+
 
   s.add_development_dependency "sqlite3"
   s.add_development_dependency 'rspec-rails'

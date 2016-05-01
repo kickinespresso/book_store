@@ -23,6 +23,7 @@ module BookStore
     def author
       self.contributors.first.author
     end
+
     def has_one_contributor_at_least
       if self.contributors.empty?
         errors.add(:contributors, "need one contributor at least")

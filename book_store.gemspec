@@ -16,7 +16,7 @@ Gem::Specification.new do |s|
   s.test_files = Dir["spec/**/*"]
   s.files = Dir["{app,config,db,lib}/**/*", "MIT-LICENSE", "Rakefile", "README.MD"]
 
-  s.add_dependency "rails", "~> 4.2.3"
+  s.add_dependency "rails", "~> 4.2.6"
   s.add_dependency "friendly_id", ">= 5.0"
   s.add_dependency "simple_form", ">= 3.0"
   s.add_dependency "kaminari", ">= 0.15"
@@ -27,7 +27,7 @@ Gem::Specification.new do |s|
   s.add_dependency 'ckeditor','~> 4.1.3'
   s.add_dependency 'acts-as-taggable-on', '~> 3.4'
   s.add_dependency 'activeadmin','~> 1.0.0.pre1'
-  s.add_dependency "fog", "1.31.0"
+  s.add_dependency 'fog', '1.36.0'
   s.add_dependency "carrierwave", ">= 0.9"
   s.add_dependency "mini_magick", ">= 3.7"
   s.add_dependency "thor", "~> 0.19.1"

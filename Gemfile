@@ -14,5 +14,5 @@ gemspec
 # gem 'byebug', group: [:development, :test]
 
 group :development do
-  gem "factory_girl_rails"
+  #gem "factory_girl_rails"
 end

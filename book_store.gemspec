@@ -19,21 +19,20 @@ Gem::Specification.new do |s|
   s.add_dependency "rails", "~> 4.2.6"
   s.add_dependency "friendly_id", ">= 5.0"
   s.add_dependency "simple_form", ">= 3.0"
-  s.add_dependency "kaminari", ">= 0.15"
-  s.add_dependency 'bootstrap-sass', '~> 3.3.4'
+  s.add_dependency "kaminari", ">= 0.16.3"
+  s.add_dependency 'bootstrap-sass', '~> 3.3.6'
   s.add_dependency 'sass-rails', '~> 5.0'
   s.add_dependency "jquery-rails", "~> 4.0.5"
   s.add_dependency "jquery-ui-rails", "~> 5.0.5"
-  s.add_dependency 'ckeditor','~> 4.1.3'
-  s.add_dependency 'acts-as-taggable-on', '~> 3.4'
+  s.add_dependency 'ckeditor','~> 4.1.6'
+  s.add_dependency 'acts-as-taggable-on', '~> 3.5'
   s.add_dependency 'activeadmin','~> 1.0.0.pre1'
   s.add_dependency 'fog', '1.36.0'
   s.add_dependency "carrierwave", ">= 0.9"
-  s.add_dependency "mini_magick", ">= 3.7"
+  s.add_dependency "mini_magick", ">= 4.5.1"
   s.add_dependency "thor", "~> 0.19.1"
   #dummy dependency
-  s.add_dependency "devise", ">= 3.5.2"
-  s.add_dependency 'ckeditor','~> 4.1.3'
+  s.add_dependency "devise", ">= 4.0.1"
 
   #s.add_development_dependency 'factory_girl_rails'
 

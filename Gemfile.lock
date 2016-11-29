@@ -1,7 +1,7 @@
 PATH
   remote: .
   specs:
-    book_store (0.1.0)
+    book_store (0.2.0)
       activeadmin (~> 1.0.0.pre1)
       acts-as-taggable-on (~> 3.5)
       bootstrap-sass (~> 3.3.6)
@@ -356,4 +356,4 @@ DEPENDENCIES
   rspec-rails
 
 BUNDLED WITH
-   1.11.2
+   1.12.5

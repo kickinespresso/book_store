@@ -7,10 +7,18 @@ require_dependency "book_store/application_controller"
       # GET /authors
       def index
         @authors = Author.order('last_name ASC').page(params[:page])
+        respond_to do |format|
+          format.html
+          format.all { redirect_to(:action => action_name ) }
+        end
       end
 
       # GET /authors/1
       def show
+        respond_to do |format|
+          format.html
+          format.all { redirect_to(:action => action_name ) }
+        end
       end
 
 
@@ -18,6 +26,11 @@ require_dependency "book_store/application_controller"
       # Use callbacks to share common setup or constraints between actions.
       def set_author
         @author = Author.find(params[:id])
+
+      rescue ActiveRecord::RecordNotFound
+        flash[:notice] = 'Author does not exist'
+        redirect_to :action => 'index'
+
       end
 
       # Only allow a trusted parameter "white list" through.
